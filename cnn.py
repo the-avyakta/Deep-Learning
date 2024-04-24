@@ -1,6 +1,6 @@
 from keras import layers, models
 from keras import datasets
-
+ 
 custom_file=datasets.mnist #10 
 choose_dataset=int(input("do you want to choose dataset? 0 for no, 1 for yes: "))
 if (choose_dataset==0):
