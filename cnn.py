@@ -6,7 +6,7 @@ choose_dataset=int(input("do you want to choose dataset? 0 for no, 1 for yes: ")
 if (choose_dataset==0):
     dataset = datasets.mnist
 else: 
-    dataset=custom_file
+    dataset=custom_file 
 output_classes = int(input("Enter Number of classes: "))
 
 (x_train, y_train), (x_test, y_test) = dataset.load_data()
