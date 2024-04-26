@@ -5,10 +5,10 @@ custom_file=datasets.mnist #10
 choose_dataset=int(input("do you want to choose dataset? 0 for no, 1 for yes: "))
 if (choose_dataset==0):
     dataset = datasets.mnist
-else: 
+else:  
     dataset=custom_file 
 output_classes = int(input("Enter Number of classes: "))
-
+ 
 (x_train, y_train), (x_test, y_test) = dataset.load_data()
 x_train, x_test = x_train / 255.0, x_test / 255.0 
 x_train = x_train.reshape(x_train.shape[0], 28, 28, 1)
@@ -30,6 +30,7 @@ model.compile(optimizer='adam',
               metrics=['accuracy'])
 
 model.summary()
+
 
 model.fit(x_train, y_train, epochs=5, validation_data=(x_test, y_test))
 
